@@ -68,6 +68,7 @@ public class Guide extends AppCompatActivity implements ViewPager.OnPageChangeLi
             public void onClick(View v) {
                 Intent intent = new Intent(Guide.this, Login.class);
                 startActivity(intent);
+                finish();
             }
         });
 

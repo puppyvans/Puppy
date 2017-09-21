@@ -16,9 +16,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".start.Guide"/>
-        <activity android:name=".start.Login"/>
-        <activity android:name=".start.Main"/>
+        <activity android:name=".start.Guide" />
+        <activity android:name=".start.Login" />
+        <activity android:name=".start.Main" />
+        <activity
+            android:name=".start.Register"
+            android:windowSoftInputMode="stateHidden" />
     </application>
 
 </manifest>

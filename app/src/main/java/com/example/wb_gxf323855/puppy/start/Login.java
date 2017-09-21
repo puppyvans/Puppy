@@ -22,7 +22,6 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
     private EditText login_password;
     private Button btn_login;
     private TextView txt_register;
-    private static final int REQUEST_REGISTER = 0;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -33,6 +32,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS, WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION, WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);   initView();
 
+        initView();
     }
 
     private void initView() {
@@ -55,7 +55,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
             }
             case R.id.txt_register: {
                 Intent intent = new Intent(this, Register.class);
-                startActivityForResult(intent, REQUEST_REGISTER);
+                startActivity(intent);
                 finish();
             }
             default:
