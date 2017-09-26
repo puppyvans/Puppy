@@ -30,7 +30,8 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
 
         getSupportActionBar().hide();
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS, WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION, WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);   initView();
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION, WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
+        initView();
 
         initView();
     }
@@ -52,11 +53,13 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
                 Intent intent = new Intent(this, Main.class);
                 startActivity(intent);
                 finish();
+                break;
             }
             case R.id.txt_register: {
                 Intent intent = new Intent(this, Register.class);
                 startActivity(intent);
                 finish();
+                break;
             }
             default:
                 break;

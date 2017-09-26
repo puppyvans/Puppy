@@ -33,14 +33,13 @@ public class Welcome extends AppCompatActivity {
     }
 
     private void initLoad() {
-        SharedPreferences sharedPreferences=getSharedPreferences("puppy",MODE_PRIVATE);
-        boolean guide=sharedPreferences.getBoolean("guide",true);
-        if (!guide){
-            handler.sendEmptyMessageDelayed(GO_LOGIN,DELAY);
-        }
-        else {
-            handler.sendEmptyMessageDelayed(GO_GUIDE,DELAY);
-            SharedPreferences.Editor editor=sharedPreferences.edit();
+        SharedPreferences sharedPreferences = getSharedPreferences("puppy", MODE_PRIVATE);
+        boolean guide = sharedPreferences.getBoolean("guide", true);
+        if (!guide) {
+            handler.sendEmptyMessageDelayed(GO_LOGIN, DELAY);
+        } else {
+            handler.sendEmptyMessageDelayed(GO_GUIDE, DELAY);
+            SharedPreferences.Editor editor = sharedPreferences.edit();
             editor.apply();
         }
 

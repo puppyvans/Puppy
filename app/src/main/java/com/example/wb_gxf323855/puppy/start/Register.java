@@ -59,11 +59,13 @@ public class Register extends AppCompatActivity implements View.OnClickListener 
                 Intent intent = new Intent(this, Main.class);
                 startActivity(intent);
                 finish();
+                break;
             }
             case R.id.txt_login: {
                 Intent intent = new Intent(this, Login.class);
                 startActivity(intent);
                 finish();
+                break;
             }
             default:
                 break;
